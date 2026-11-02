@@ -119,12 +119,12 @@ $ChromeFeaturePolicies = @(
   # PasswordManagerEnabled
   # https://chromeenterprise.google/policies/#PasswordManagerEnabled
   # I would only recommend disabling this if you supply your users another password manager.
-  @{
-    PolicyPath   = $ChromeEnforcedPolicies
-    PropertyName = 'PasswordManagerEnabled'
-    DesiredValue = 0
-    Description  = 'Disable built-in Chrome password manager'
-  },
+  # @{
+  #   PolicyPath   = $ChromeEnforcedPolicies
+  #   PropertyName = 'PasswordManagerEnabled'
+  #   DesiredValue = 0
+  #   Description  = 'Disable built-in Chrome password manager'
+  # },
 
   # BackgroundModeEnabled
   # https://chromeenterprise.google/policies/#BackgroundModeEnabled
