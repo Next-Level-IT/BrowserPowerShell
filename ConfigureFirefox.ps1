@@ -122,23 +122,23 @@ $DisableMiscFeatures = @(
 
 )
 
-$DisablePasswordManager = @(
+# $DisablePasswordManager = @(
 
-  # https://mozilla.github.io/policy-templates/#passwordmanagerenabled
-  @{
-    PropertyName = 'PasswordManagerEnabled'
-    DesiredValue = 0
-    Description  = 'Mostly disable the Firefox password manager.'
-  }
+#   # https://mozilla.github.io/policy-templates/#passwordmanagerenabled
+#   @{
+#     PropertyName = 'PasswordManagerEnabled'
+#     DesiredValue = 0
+#     Description  = 'Mostly disable the Firefox password manager.'
+#   }
 
-  # https://mozilla.github.io/policy-templates/#offertosaveloginsdefault
-  @{
-    PropertyName = 'OfferToSaveLoginsDefault'
-    DesiredValue = 0
-    Description  = 'Do not offer to save login information.'
-  }
+#   # https://mozilla.github.io/policy-templates/#offertosaveloginsdefault
+#   @{
+#     PropertyName = 'OfferToSaveLoginsDefault'
+#     DesiredValue = 0
+#     Description  = 'Do not offer to save login information.'
+#   }
 
-)
+# )
 
 $HideNagsAndSplashScreens = @(
 
@@ -357,7 +357,7 @@ $SecurityPolicies = @(
 
 )
 
-$FirefoxPolicies = $($TrustRootCerts; $EnableEntraSSO; $DisableMiscFeatures; $DisablePasswordManager; $HideNagsAndSplashScreens; $DisableAds; $SecurityPolicies)
+$FirefoxPolicies = $($TrustRootCerts; $EnableEntraSSO; $DisableMiscFeatures; $HideNagsAndSplashScreens; $DisableAds; $SecurityPolicies)
 
 foreach ($Policy in $FirefoxPolicies) {
   Set-Policy @Policy -PolicyPath $PoliciesPath
